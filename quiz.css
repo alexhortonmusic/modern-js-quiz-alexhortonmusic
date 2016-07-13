@@ -1,0 +1,16 @@
+body {
+	font-family: 'Raleway', sans-serif;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+//---------------
+-------NAV-------
+-----------------//
+
+.gameTitle {
+	font-family: 'Bangers', cursive; 
+	text-align: center;
+	font-size: 3em;
+}
