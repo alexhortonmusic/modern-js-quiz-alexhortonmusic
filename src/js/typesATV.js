@@ -7,13 +7,16 @@ const MegaATV = function () {
 	this.attack = 'RollOver';
 };
 
-MegaATV.prototype = new ATV();
+MegaATV.prototype = new ATV(85, 95, 6, 9);
 
 const SharpATV = function () {
 	this.name = 'Bladey Spinz';
 	this.attack = 'Swirly Cutz';
 };
 
-SharpATV.prototype = new ATV();
+SharpATV.prototype = new ATV(85, 100, 4, 11);
 
-module.exports = {MegaATV, SharpATV};
+let sharpATV = new SharpATV();
+let megaATV = new MegaATV();
+
+module.exports = {megaATV, sharpATV};

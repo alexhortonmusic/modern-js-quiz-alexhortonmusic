@@ -16,4 +16,7 @@ const PowerDrone = function () {
 
 PowerDrone.prototype = new Drone(60, 90, 3, 4);
 
-module.exports = {LaserDrone, PowerDrone};
+let laserDrone = new LaserDrone();
+let powerDrone = new PowerDrone();
+
+module.exports = {laserDrone, powerDrone};

@@ -2,40 +2,43 @@
 
 const randoNumGen = require('./randoNumGen');
 
-const Robot = function () {
+function Robot () {
 	this.name = null;
-};
+}
 
-const Drone = function (minHealth, maxHealth, minDamage, maxDamage) { //idea to pass these values from Dan
-	this.name = 'Drone';
+function Drone (minHealth, maxHealth, minDamage, maxDamage) { //idea to pass these values from Dan
+	this.name = null;
 	this.minHealth = minHealth;
 	this.maxHealth = maxHealth;
 	this.minDamage = minDamage;
 	this.maxDamage = maxDamage;
 	this.health = randoNumGen.randoRange(minHealth, maxHealth);
-};
+	this.attackDamage = randoNumGen.randoRange(minDamage, maxDamage);
+}
 
 Drone.prototype = new Robot();
 
-const Bipedal = function (minHealth, maxHealth, minDamage, maxDamage) {
-	this.name = 'Bipedal';
+function Bipedal (minHealth, maxHealth, minDamage, maxDamage) {
+	this.name = null;
 	this.minHealth = minHealth;
 	this.maxHealth = maxHealth;
 	this.minDamage = minDamage;
 	this.maxDamage = maxDamage;
 	this.health = randoNumGen.randoRange(minHealth, maxHealth);
-};
+	this.attackDamage = randoNumGen.randoRange(minDamage, maxDamage);
+}
 
 Bipedal.prototype = new Robot();
 
-const ATV = function (minHealth, maxHealth, minDamage, maxDamage) {
-	this.name = 'ATV';
+function ATV (minHealth, maxHealth, minDamage, maxDamage) {
+	this.name = null;
 	this.minHealth = minHealth;
 	this.maxHealth = maxHealth;
 	this.minDamage = minDamage;
 	this.maxDamage = maxDamage;
 	this.health = randoNumGen.randoRange(minHealth, maxHealth);
-};
+	this.attackDamage = randoNumGen.randoRange(minDamage, maxDamage);
+}
 
 ATV.prototype = new Robot();
 

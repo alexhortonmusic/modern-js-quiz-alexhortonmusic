@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Battle Bots</title>
-	<link href="https://fonts.googleapis.com/css?family=Bangers|Raleway:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
 	<link rel="stylesheet" href="quiz.css">
 </head>
 <body>
@@ -14,16 +14,20 @@
 		</div>
 	</nav>
 
-	<div>
+	<div class="container">
 		<div>
 			<input type="text" id="player1" class="playerName">
-			<select id="player1Select" class="selectBox"></select>
+			<select id="player1Select" class="selectBox">
+				<option selected disabled>Choose player 1</option>
+			</select>
 		</div>
 		<div>
 			<input type="text" id="player2" class="playerName">
-			<select id="player2Select" class="selectBox"></select>
+			<select id="player2Select" class="selectBox">
+				<option selected disabled>Choose player 2</option>
+			</select>
 		</div>
-		<div id="attackBtn"></div> <!-- this will be the attack button -->
+		<div id="attackBtn"><p>ATTACK, SON!</p></div> <!-- this will be the attack button -->
 	</div>
 
 

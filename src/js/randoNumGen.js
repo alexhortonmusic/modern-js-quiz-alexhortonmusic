@@ -1,7 +1,8 @@
 "use strict";
 
 function randoRange (min, max) {
-	let damageRange = Math.floor(Math.random() * (max - min) + min);
+	let range = Math.floor(Math.random() * (max - min) + min);
+	return range;
 }
 
 module.exports = {randoRange};
