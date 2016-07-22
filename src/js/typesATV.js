@@ -1,22 +1,32 @@
 'use strict';
 
 const ATV = require('./robot').ATV;
+const randoNumGen = require('./randoNumGen');
 
-const MegaATV = function () {
+const Megachine = function () {
 	this.name = 'Megachine';
 	this.attack = 'RollOver';
+	this.minHealth += 5;
+	this.maxHealth += 5;
+	this.minDamage += 0;
+	this.maxDamage -= 1;
+	this.health = randoNumGen.randoRange(this.minHealth, this.maxHealth);
+	this.attackDamage = randoNumGen.randoRange(this.minDamage, this.maxDamage);
 };
 
-MegaATV.prototype = new ATV(85, 95, 6, 9);
+Megachine.prototype = new ATV();
 
-const SharpATV = function () {
-	this.name = 'Bladey Spinz';
+const Bladey = function () {
+	this.name = 'Bladey';
 	this.attack = 'Swirly Cutz';
+	this.minHealth += 2;
+	this.maxHealth += 2;
+	this.minDamage += 4;
+	this.maxDamage += 2;
+	this.health = randoNumGen.randoRange(this.minHealth, this.maxHealth);
+	this.attackDamage = randoNumGen.randoRange(this.minDamage, this.maxDamage);
 };
 
-SharpATV.prototype = new ATV(85, 100, 4, 11);
+Bladey.prototype = new ATV();
 
-let sharpATV = new SharpATV();
-let megaATV = new MegaATV();
-
-module.exports = {megaATV, sharpATV};
+module.exports = {Megachine, Bladey};

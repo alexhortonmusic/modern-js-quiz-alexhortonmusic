@@ -1,16 +1,16 @@
 "use strict";
 
-let gulp = require('gulp');
-let jshint = require('gulp-jshint');
-let watch = require('gulp-watch');
-let watchify = require('watchify');
-let browserify = require('browserify');
-let source = require('vinyl-source-stream');
-let buffer = require('vinyl-buffer');
-let gutil = require('gulp-util');
-let sourcemaps = require('gulp-sourcemaps');
+var gulp = require('gulp');
+var jshint = require('gulp-jshint');
+var watch = require('gulp-watch');
+var watchify = require('watchify');
+var browserify = require('browserify');
+var source = require('vinyl-source-stream');
+var buffer = require('vinyl-buffer');
+var gutil = require('gulp-util');
+var sourcemaps = require('gulp-sourcemaps');
 
-let handleError = function(task) {
+var handleError = function(task) {
   return function(err) {
 
     notify.onError({
@@ -29,12 +29,12 @@ let handleError = function(task) {
   Delete or comment out if you are not using Browserify
  */
 
-let customOpts = {
+var customOpts = {
   entries: ['./src/js/quiz.js'],
   debug: true
 };
-let opts = Object.assign({}, watchify.args, customOpts);
-let bundler = watchify(browserify(opts)); 
+var opts = Object.assign({}, watchify.args, customOpts);
+var bundler = watchify(browserify(opts));
 bundler.on('update', bundle); // on any dep update, runs the bundler
 bundler.on('log', gutil.log); // output build logs to terminal
 

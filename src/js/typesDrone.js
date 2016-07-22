@@ -1,22 +1,32 @@
 'use strict';
 
 const Drone = require('./robot').Drone;
+const randoNumGen = require('./randoNumGen');
 
-const LaserDrone = function () {
-	this.name = 'Pew Pew';
+const PewPew = function () {
+	this.name = 'PewPew';
 	this.attack = 'Pew Pew Pew';
+	this.minHealth += 0;
+	this.maxHealth -= 5;
+	this.minDamage += 1;
+	this.maxDamage += 2;
+	this.health = randoNumGen.randoRange(this.minHealth, this.maxHealth);
+	this.attackDamage = randoNumGen.randoRange(this.minDamage, this.maxDamage);
 };
 
-LaserDrone.prototype = new Drone(70, 80, 5, 8);
+PewPew.prototype = new Drone();
 
-const PowerDrone = function () {
-	this.name = 'Whirrr Machine';
+const WhirrrMachine = function () {
+	this.name = 'WhirrrMachine';
 	this.attack = 'BoneSaw';
+	this.minHealth -= 5;
+	this.maxHealth -= 3;
+	this.minDamage += 4;
+	this.maxDamage += 4;
+	this.health = randoNumGen.randoRange(this.minHealth, this.maxHealth);
+	this.attackDamage = randoNumGen.randoRange(this.minDamage, this.maxDamage);
 };
 
-PowerDrone.prototype = new Drone(60, 90, 3, 4);
+WhirrrMachine.prototype = new Drone();
 
-let laserDrone = new LaserDrone();
-let powerDrone = new PowerDrone();
-
-module.exports = {laserDrone, powerDrone};
+module.exports = {PewPew, WhirrrMachine};

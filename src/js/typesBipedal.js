@@ -1,22 +1,32 @@
 'use strict';
 
 const Bipedal = require('./robot').Bipedal;
+const randoNumGen = require('./randoNumGen');
 
-const MutatedBipedal = function () {
-	this.name = 'Mutant 2-Legs';
+const ThreeLegs = function () {
+	this.name = 'ThreeLegs';
 	this.attack = 'Scissor Kick';
+	this.minHealth += 3;
+	this.maxHealth += 4;
+	this.minDamage -= 2;
+	this.maxDamage += 1;
+	this.health = randoNumGen.randoRange(this.minHealth, this.maxHealth);
+	this.attackDamage = randoNumGen.randoRange(this.minDamage, this.maxDamage);
 };
 
-MutatedBipedal.prototype = new Bipedal(80, 90, 6, 10);
+ThreeLegs.prototype = new Bipedal();
 
-const RockHandsBipedal = function () {
-	this.name = 'Stone Hands';
+const StoneHands = function () {
+	this.name = 'StoneHands';
 	this.attack = 'Ground Pound';
+	this.minHealth += 5;
+	this.maxHealth += 5;
+	this.minDamage += 3;
+	this.maxDamage += 2;
+	this.health = randoNumGen.randoRange(this.minHealth, this.maxHealth);
+	this.attackDamage = randoNumGen.randoRange(this.minDamage, this.maxDamage);
 };
 
-RockHandsBipedal.prototype = new Bipedal(100, 105, 10, 12);
+StoneHands.prototype = new Bipedal();
 
-let mutatedBipedal = new MutatedBipedal();
-let rockHandsBipedal = new RockHandsBipedal();
-
-module.exports = {mutatedBipedal, rockHandsBipedal};
+module.exports = {ThreeLegs, StoneHands};
