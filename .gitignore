@@ -1,3 +1,4 @@
 node_modules
 dist/bundle.js
-lib
+dist/bundle.js.map
+lib/

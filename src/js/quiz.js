@@ -1,7 +1,5 @@
 'use strict';
 
-const Combat = require('./combat');
-
 // bot types
 const Megachine = require('./typesATV').Megachine;
 const Bladey = require('./typesATV').Bladey;
@@ -111,18 +109,17 @@ let player2Round = function () {
 
 //player clicks this button for 1 round of damage to each robot
 $('#attackBtn').click(function () {
+	player1Round();
+	player2Round();
 	if (player1.health <= 0) {
 		player1.health = 0;
 		playByPlay.empty();
 		playByPlay.prepend(`<h1>${player1.name} wins!</h1>`);
 		return 'player1';
-	}
-	else if (player2.health <= 0) {
+	} else if (player2.health <= 0) {
 		player2.health = 0;
 		playByPlay.empty();
 		playByPlay.prepend(`<h1>${player2.name} wins!</h1>`);
 		return 'player2';
 	}
-	player1Round();
-	player2Round();
 });
