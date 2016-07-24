@@ -1,0 +1,109 @@
+body {
+	font-family: 'Raleway', sans-serif;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+/*---------------
+-------NAV-------
+-----------------*/
+
+.gameTitle {
+	text-align: center;
+	font-size: 3em;
+}
+
+/*---------------
+--Game Play View--
+-----------------*/
+
+.gamePlayContainer {
+	display: flex;
+	justify-content: space-around;
+}
+
+.playerBox {
+	width: 25%;
+	border: 1px solid black;
+}
+
+.health1,
+.health2 {
+	text-align: center;
+	font-size: 3em;
+}
+
+.playerBox h3 {
+	text-align: center;
+}
+
+.vs {
+	width: 25%;
+}
+
+.vs h1 {
+	text-align: center;
+}
+
+.playByPlay {
+	text-align: center;
+}
+
+.colorCommentary {
+	margin-bottom: 15px;
+}
+
+.colorCommentary:nth-child(odd) {
+	border: 2px solid #1e8449;
+}
+
+/*---------------
+-------Input------
+-----------------*/
+
+.gameStartContainer {
+	width: 500px;
+	margin: 0 auto;
+}
+
+.playerName {
+	margin-left: 125px;
+}
+
+/*-----------------
+------BTNS----------
+------------------*/
+
+#startFightBtn {
+	width: 200px;
+	margin: 20px auto;
+	background: #1e8449;
+	border: 1px solid white;
+	border-radius: 25px;
+}
+
+#startFightBtn p {
+	text-align: center;
+	color: white;
+}
+
+#startFightBtn:hover,
+#startFightBtn:active {
+	transition: 0.2s;
+	background: #36d278;
+}
+
+#attackBtn {
+	display: block;
+	width: 200px;
+	margin: 40px auto;
+	background: #1e8449;
+	border: 1px solid white;
+	border-radius: 25px;
+}
+
+#attackBtn p {
+	text-align: center;
+	color: white;
+}

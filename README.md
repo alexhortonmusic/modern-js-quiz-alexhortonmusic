@@ -1,23 +1,6 @@
 # Modern JavaScript Developer Quiz
 # Robot Battledome
 
-## Setup
-
-1. `cd` to your quizzes directory.
-1. Clone this repository and `cd` into the directory it creates.
-1. Now run the following commands.
-
-    ```bash
-    git checkout -b quiz
-    touch index.html
-    touch quiz.js
-    touch quiz.css
-    ```
-
-You are now ready to work in the `quiz` branch.
-
-When your work in complete, push up the branch (`git push origin quiz`) and submit the pull request on Github.
-
 ## Instructions
 
 ### Code/Tools Requirements
@@ -76,20 +59,4 @@ If you have completed the base requirements, and want to explore object composit
 1. When the battle is over display the outcome to the user. For example...
 
 ##### The Viper Drone defeated the Behemoth ATV with its flamethrower.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
